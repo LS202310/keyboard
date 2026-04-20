@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 背景 -->
+    <color name="bg_main">#1A1E2E</color>
+    <color name="bg_header">#0F1219</color>
+    <color name="bg_log">#0A0D14</color>
+
+    <!-- 按键 -->
+    <color name="key_num_bg">#252A3D</color>
+    <color name="key_func_bg">#1E3A5F</color>
+    <color name="key_enter_bg">#1B4332</color>
+    <color name="key_text">#E0E8FF</color>
+    <color name="key_func_text">#7EC8E3</color>
+    <color name="key_enter_text">#69DB7C</color>
+
+    <!-- 状态 -->
+    <color name="status_normal">#A0AFCC</color>
+    <color name="status_connected">#69DB7C</color>
+    <color name="dot_connected">#69DB7C</color>
+    <color name="dot_disconnected">#556677</color>
+
+    <!-- 按钮 -->
+    <color name="btn_start">#1B6CA8</color>
+    <color name="btn_stop">#8B2020</color>
+
+    <!-- 日志 -->
+    <color name="log_text">#5A8A6A</color>
+</resources>
