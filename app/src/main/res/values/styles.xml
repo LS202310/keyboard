@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/btn_start</item>
+        <item name="colorPrimaryDark">@color/bg_header</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:statusBarColor">@color/bg_header</item>
+    </style>
+
+    <!-- 数字键基础样式 -->
+    <style name="KeyBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">62dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- 数字键 -->
+    <style name="KeyBtn.Num" parent="KeyBtn">
+        <item name="android:textColor">@color/key_text</item>
+        <item name="android:backgroundTint">@color/key_num_bg</item>
+    </style>
+
+    <!-- 功能键 -->
+    <style name="KeyBtn.Func" parent="KeyBtn">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/key_func_text</item>
+        <item name="android:backgroundTint">@color/key_func_bg</item>
+    </style>
+
+    <!-- Enter 键 -->
+    <style name="KeyBtn.Enter" parent="KeyBtn">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/key_enter_text</item>
+        <item name="android:backgroundTint">@color/key_enter_bg</item>
+        <item name="android:layout_height">130dp</item>
+    </style>
+
+</resources>
