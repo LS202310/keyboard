@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main"
+    android:padding="0dp">
+
+    <!-- 顶部状态栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/bg_header"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:id="@+id/connection_dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/dot_disconnected"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="未启动"
+            android:textColor="@color/status_normal"
+            android:textSize="13sp"
+            android:fontFamily="monospace"/>
+
+        <Button
+            android:id="@+id/btn_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:backgroundTint="@color/btn_start"
+            android:paddingHorizontal="14dp"
+            android:stateListAnimator="@null"
+            android:text="Start Broadcasting"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- 数字键盘区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="center">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="monospace"
+            android:text="AURIX NumPad"
+            android:textColor="@color/key_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 行1: NumLock / * ⌫ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_numlock"
+                style="@style/KeyBtn.Func"
+                android:layout_weight="1"
+                android:text="Num" />
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_slash"
+                style="@style/KeyBtn.Func"
+                android:text="/"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_star"
+                style="@style/KeyBtn.Func"
+                android:text="*"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_backspace"
+                style="@style/KeyBtn.Func"
+                android:text="⌫"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- 行2: 7 8 9 - -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btn_7"
+                style="@style/KeyBtn.Num"
+                android:text="7"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_8"
+                style="@style/KeyBtn.Num"
+                android:text="8"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_9"
+                style="@style/KeyBtn.Num"
+                android:text="9"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_minus"
+                style="@style/KeyBtn.Func"
+                android:text="−"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- 行3: 4 5 6 + -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btn_4"
+                style="@style/KeyBtn.Num"
+                android:text="4"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_5"
+                style="@style/KeyBtn.Num"
+                android:text="5"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_6"
+                style="@style/KeyBtn.Num"
+                android:text="6"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_plus"
+                style="@style/KeyBtn.Func"
+                android:text="+"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- 行4: 1 2 3 Enter(span 2行) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btn_1"
+                style="@style/KeyBtn.Num"
+                android:text="1"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_2"
+                style="@style/KeyBtn.Num"
+                android:text="2"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_3"
+                style="@style/KeyBtn.Num"
+                android:text="3"
+                android:layout_weight="1"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_enter"
+                style="@style/KeyBtn.Enter"
+                android:text="ENTER"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- 行5: 0(宽) . -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btn_0"
+                style="@style/KeyBtn.Num"
+                android:text="0"
+                android:layout_weight="2"/>
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <Button android:id="@+id/btn_dot"
+                style="@style/KeyBtn.Num"
+                android:text="."
+                android:layout_weight="1"/>
+            <!-- 占位（对齐 Enter 列） -->
+            <View android:layout_width="8dp" android:layout_height="1dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 日志区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:background="@color/bg_log"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG"
+            android:textSize="10sp"
+            android:textColor="#556677"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="2dp"/>
+
+        <ScrollView
+            android:id="@+id/scroll_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:textColor="@color/log_text"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="2dp"/>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
